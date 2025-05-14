@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/markdown-it": "^14.1.2",
     "@unhead/vue": "^2.0.8",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "ant-design-vue": "4.x",
     "dayjs": "^1.11.13",
