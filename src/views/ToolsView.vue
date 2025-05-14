@@ -5,7 +5,7 @@
         <router-link :to="route.path" class="tool-inner">
           <div
             class="tool-img"
-            :style="{ backgroundImage: `url(@/assets/${route.meta.bg})` }"
+            :style="{ backgroundImage: 'url(@/assets/tool-bg1.png)' }"
           ></div>
           <div class="tool-text">
             <component
@@ -53,10 +53,6 @@ function resolveIcon(iconName: string): Component {
   } else {
     return ArcoIcons.IconFile;
   }
-}
-
-function getImgSrc(name: string): string {
-  return new URL(`@/assets/${name}`, import.meta.url).href;
 }
 </script>
 

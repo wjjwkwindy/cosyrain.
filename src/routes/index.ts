@@ -33,7 +33,7 @@ const markdownRoutes = Object.entries(markdownFiles).map(([file, loader]) => {
 });
 
 // 定义路由
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: MainLayout,
@@ -54,7 +54,9 @@ const routes = [
         name: 'Photo Composition',
         meta: {
           icon: 'IconFileImage',
-          bg: 'tool-bg1.png'
+          bg: 'tool-bg1.png',
+          title: '',
+          date: ''
         },
         component: () => import('../../pages/tools/Img.vue'),
       },

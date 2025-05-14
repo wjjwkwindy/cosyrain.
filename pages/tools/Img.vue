@@ -109,9 +109,9 @@ function drawImageOnCanvas() {
 const isDrawing = ref(false);
 const lastX = ref(0);
 const lastY = ref(0);
-const paths = ref<Array<{ x1: number; y1: number; x2: number; y2: number }>>(
-  []
-);
+// const paths = ref<Array<{ x1: number; y1: number; x2: number; y2: number }>>(
+//   []
+// );
 
 const mousedown = (e: MouseEvent) => {
   isDrawing.value = true;
