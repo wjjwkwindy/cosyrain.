@@ -39,7 +39,7 @@ import { IconSun, IconSearch } from '@arco-design/web-vue/es/icon';
   display: inline-block;
   font-weight: bold;
   font-size: 2em;
-  background: #80ff00;
+  background: #42f298;
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 20px;
