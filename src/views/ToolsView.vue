@@ -5,7 +5,7 @@
         <router-link :to="route.path" class="tool-inner">
           <div
             class="tool-img"
-            :style="{ backgroundImage: 'url(@/assets/tool-bg1.png)' }"
+            :style="{ backgroundImage: `url(/${route.meta.bg})` }"
           ></div>
           <div class="tool-text">
             <component
@@ -14,7 +14,7 @@
               class="tool-icon"
             ></component>
             <h2>{{ route.name }} <a-tag size="small">photo</a-tag></h2>
-            <p>阿斯顿法师打发是的法师打发四大分三大发啥打法</p>
+            <p>{{ route.meta.memo }}</p>
           </div>
         </router-link>
       </li>

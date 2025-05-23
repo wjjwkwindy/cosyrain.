@@ -55,8 +55,21 @@ const routes: RouteRecordRaw[] = [
         meta: {
           icon: 'IconFileImage',
           bg: 'tool-bg1.png',
+          memo: '上传照片，使用划线工具进行画面结构分析',
           title: '',
-          date: ''
+          date: '',
+        },
+        component: () => import('../../pages/tools/Img.vue'),
+      },
+      {
+        path: '/tools/calc',
+        name: '计算器',
+        meta: {
+          icon: 'IconBarChart',
+          bg: 'tool-bg2.png',
+          memo: '根据定投金额和周期计算收益',
+          title: '',
+          date: '',
         },
         component: () => import('../../pages/tools/Img.vue'),
       },
