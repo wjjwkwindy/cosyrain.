@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <ArticleList />
-  </div>
+  <ArticleList />
 </template>
 
 <script setup lang="ts">
