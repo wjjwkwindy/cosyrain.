@@ -1,6 +1,6 @@
-![TeamCity build status](https://teamcity.co2oc.com/app/rest/builds/buildType:id:Cosyrain_Build/statusIcon.svg)
+<img src="./static/readme-logo.png"  width="350"/>
 
-<img src="./public/readme-logo.png"  width="300"/>  
+![TeamCity build status](https://teamcity.co2oc.com/app/rest/builds/buildType:id:Cosyrain_Build/statusIcon.svg)
 
 Vue 3 + TypeScript + Vite
 
