@@ -6,7 +6,6 @@
         <a-col>
           <a-button
             v-if="displayReset"
-            type="primary"
             @click="handleTaskReset"
             :disabled="taskStatus"
             >重置</a-button
@@ -19,22 +18,14 @@
       <!-- 表格 -->
       <a-row>
         <a-col :span="24">
-          <a-table :columns="columns" :data-source="data" :pagination="false">
-            <template #headerCell="{ column }">
-              <template v-if="column.dataIndex === 'status'">
-                <Boxes />
-                <span>{{ column.title }}</span>
-              </template>
+          <a-table :columns="columns" :data="data" :pagination="false">
+            <template #time="{ record }">
+              {{ record.time * 1000 }}
             </template>
-            <template #bodyCell="{ column, record }">
-              <template v-if="column.key === 'time'">
-                {{ record.time * 1000 }}
-              </template>
-              <template v-if="column.key === 'status'">
-                <a-tag :key="record.status" :color="tagColor(record.status)">
-                  {{ tagName(record.status) }}
-                </a-tag>
-              </template>
+            <template #status="{ record }">
+              <a-tag :color="tagColor(record.status)">
+                {{ tagName(record.status) }}
+              </a-tag>
             </template>
           </a-table>
         </a-col>
@@ -43,10 +34,12 @@
       <a-row>
         <a-col>
           <span>已完成的任务：</span>
-          <a-tag v-if="!completedList.length">无</a-tag>
-          <a-tag v-else v-for="item in completedList" color="purple">
-            任务{{ item }}
-          </a-tag>
+          <a-space>
+            <a-tag v-if="!completedList.length">无</a-tag>
+            <a-tag v-else v-for="item in completedList" color="purple">
+              {{ item }}
+            </a-tag>
+          </a-space>
         </a-col>
       </a-row>
     </a-space>
@@ -56,7 +49,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Queue from '@/logics/Queue';
-import { Boxes } from 'lucide-vue-next';
 
 type Status = 0 | 1 | 2;
 interface Task {
@@ -88,17 +80,17 @@ function tagName(status: Status) {
 
 // 模拟异步任务
 const data = ref<Task[]>([
-  { id: '1', time: 1, status: 0 },
-  { id: '2', time: 3, status: 0 },
-  { id: '3', time: 2, status: 0 },
-  { id: '4', time: 3, status: 0 },
-  { id: '5', time: 7, status: 0 },
-  { id: '6', time: 1, status: 0 },
+  { id: '任务1', time: 1, status: 0 },
+  { id: '任务2', time: 3, status: 0 },
+  { id: '任务3', time: 2, status: 0 },
+  { id: '任务4', time: 3, status: 0 },
+  { id: '任务5', time: 5, status: 0 },
+  { id: '任务6', time: 1, status: 0 },
 ]);
 const columns = [
-  { title: '任务ID', dataIndex: 'id', key: 'id' },
-  { title: '执行时间(ms)', dataIndex: 'time', key: 'time' },
-  { title: '执行状态', dataIndex: 'status', key: 'status' },
+  { title: '任务ID', dataIndex: 'id' },
+  { title: '执行时间(ms)', slotName: 'time' },
+  { title: '执行状态', slotName: 'status' },
 ];
 const completedList = ref([] as Array<any>);
 const displayReset = ref(false);

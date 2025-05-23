@@ -128,9 +128,6 @@ queue.run();
 
 <MultipleTaskQueue />
 
-> [!NOTE]
-> Highlights information that users should take into account, even when skimming.
-
 <script setup>
   import MultipleTaskQueue from '../../src/components/MultipleTaskQueue.vue'
 </script>

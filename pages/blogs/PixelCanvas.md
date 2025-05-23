@@ -6,6 +6,9 @@ tag: TS
 
 <PixelCanvasCard />
 
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
 <script setup>
   import PixelCanvasCard from '../../src/components/PixelCanvasCard.vue';
 </script>
