@@ -6,7 +6,7 @@ import NotFoundView from '@/views/NotFoundView.vue';
 import MainLayout from '@/views/MainLayout.vue';
 
 // 读取所有的 markdown 文件
-const markdownFiles = import.meta.glob('../../pages/blogs/*.md', {
+const markdownFiles = import.meta.glob('../../pages/posts/*.md', {
   eager: true,
 });
 console.log('🚀 ~ markdownFiles:', markdownFiles);

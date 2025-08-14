@@ -34,7 +34,7 @@ declare module 'vue-router' {
 }
 
 const router = useRouter();
-const routes = router.getRoutes().filter((i) => i.path.startsWith('/blogs'));
+const routes = router.getRoutes().filter((i) => i.path.startsWith('/posts'));
 </script>
 
 <style scoped>
