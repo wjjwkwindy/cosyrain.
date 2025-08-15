@@ -12,7 +12,7 @@
           <icon-search />
         </template>
       </a-input>
-      <a-list :max-height="300">
+      <a-list :max-height="300" :split="false" size="small">
         <a-list-item v-for="value in searchResults" :key="value.path">
           <router-link
             :to="value.path"
