@@ -17,20 +17,23 @@ import vercel from '@/assets/vercel.svg';
   justify-content: center;
   padding: 10px 0;
   font-size: 0.9em;
-  color: #7e7e7e;
+  color: var(--color-text-2);
   margin-top: auto;
   text-align: center;
-}
-.footer svg {
-  width: 50px;
-}
-.footer .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid #8882;
-}
-.footer .container span {
-  margin-right: 5px;
+
+  svg {
+    width: 50px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #8882;
+
+    span {
+      margin-right: 5px;
+    }
+  }
 }
 </style>

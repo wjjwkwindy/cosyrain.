@@ -56,7 +56,7 @@ function resolveIcon(iconName: string): Component {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .tool-list {
   display: grid;
   gap: 20px;
@@ -65,49 +65,49 @@ function resolveIcon(iconName: string): Component {
 
 .tool {
   border: 8px solid #fff;
-  box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
-    rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
-    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
-    rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
-    rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
-    rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-}
-.tool-inner {
-  display: block;
-  background: #fff;
-  overflow: hidden;
-  border: 1px solid #dbdbdbab;
-}
-.tool-img {
-  background: #f5f5f5;
-  height: 100px;
-  background-repeat: repeat;
-  background-position: center;
-  background-size: cover;
-}
-.tool-text {
-  display: flex;
-  flex-direction: column;
-  padding: 0 15px;
-  padding-bottom: 15px;
-  padding-top: 20px;
-  position: relative;
-}
+  box-shadow: @card-shadow;
 
-.tool-text .tool-icon {
-  position: absolute;
-  top: -15px;
-  left: 15px;
-  background: #fff;
-  border-radius: 5px;
-  border: 2px solid #fff;
-  box-sizing: content-box;
-}
-.tool-text h2 {
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-.tool-text p {
-  color: #727272;
+  .tool-inner {
+    display: block;
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #dbdbdbab;
+  }
+
+  .tool-img {
+    background: #f5f5f5;
+    height: 100px;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tool-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    position: relative;
+
+    .tool-icon {
+      position: absolute;
+      top: -15px;
+      left: 15px;
+      background: #fff;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      box-sizing: content-box;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #727272;
+    }
+  }
 }
 </style>

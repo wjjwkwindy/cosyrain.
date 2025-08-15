@@ -3,7 +3,7 @@
     <a-empty description="404" />
     <div class="notfound-link">
       <router-link to="/">Go to Home</router-link>
-      <MoveRight :size="18" color="#18794e" />
+      <MoveRight :size="18" color="#1cc26c" />
     </div>
   </div>
 </template>
@@ -12,21 +12,22 @@
 import { MoveRight } from 'lucide-vue-next';
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .notfound {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.notfound-link a {
-  color: #000;
-  color: #18794e;
-}
-.notfound-link{
-  display: flex;
-  align-items: center;
-  gap: 5px;
+
+  .notfound-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    a {
+      color: @green-text;
+    }
+  }
 }
 </style>

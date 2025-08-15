@@ -33,4 +33,11 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `@import "@/styles/variables.less";`,
+      },
+    },
+  },
 });

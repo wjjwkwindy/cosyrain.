@@ -58,7 +58,7 @@ console.log(`🚀 ~ 搜索页面 - 所有路由：`, router.getRoutes());
 searchResults.value = router.getRoutes();
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .search-input {
   margin-bottom: 20px;
 }
@@ -66,9 +66,10 @@ searchResults.value = router.getRoutes();
 .search-link {
   display: flex;
   justify-content: space-between;
-}
-.search-link span:last-child {
-  font-size: 0.7rem;
-  color: #9b9b9b;
+
+  span:last-child {
+    font-size: 0.7rem;
+    color: var(--color-text-3);
+  }
 }
 </style>

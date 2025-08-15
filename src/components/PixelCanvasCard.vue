@@ -4,7 +4,7 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style scoped lang="less">
 .card {
   width: 200px;
   height: 300px;
