@@ -54,7 +54,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { IconDelete, IconEmpty, IconDownload,IconUndo } from '@arco-design/web-vue/es/icon';
 import type { FileItem } from '@arco-design/web-vue/es/upload/interfaces';
 
 // refs

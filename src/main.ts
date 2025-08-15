@@ -16,12 +16,14 @@ import '@/styles/github-markdown.css';
 import App from '@/App.vue';
 import WrapperArticle from '@/views/WrapperArticle.vue';
 import router from '@/routes/index';
+import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 
 const app = createApp(App);
 const head = createHead();
 
 app.use(router);
 app.use(head);
+app.use(ArcoVueIcon);
 // app.use(Antd);
 app.component('WrapperArticle', WrapperArticle);
 
