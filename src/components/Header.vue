@@ -13,15 +13,18 @@
         <RouterLink to="/about">About</RouterLink>
       </div>
       <div class="header-icons">
-        <icon-sun :size="20" />
-        <icon-search :size="20" />
+        <icon-search :size="20" @click="showSearchModal" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { IconSun, IconSearch } from '@arco-design/web-vue/es/icon';
+// 搜索弹窗
+const openSearchModal = inject('openSearchModal') as () => void;
+function showSearchModal() {
+  openSearchModal();
+}
 </script>
 
 <style scoped>

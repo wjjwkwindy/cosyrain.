@@ -36,6 +36,7 @@ const markdownRoutes = Object.entries(markdownFiles).map(([file, loader]) => {
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
+    name: '首页',
     component: MainLayout,
     children: [
       {
@@ -51,7 +52,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: '/tools/img',
-        name: 'Photo Composition',
+        name: '照片构图分析',
         meta: {
           icon: 'IconFileImage',
           bg: 'tool-bg1.png',
@@ -84,15 +85,17 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/404',
+    name: '404',
     component: NotFoundView,
   },
   {
     path: '/:pathMatch(.*)',
+    name: '404 All',
     redirect: '/404',
   },
 ];
 
-console.log(routes);
+console.log("🚀 ~ 路由定义页面 - 所有路由:", routes)
 
 const router = createRouter({
   history: createWebHistory(),
