@@ -2,8 +2,12 @@
 
 ![TeamCity build status](https://teamcity.co2oc.com/app/rest/builds/buildType:id:Cosyrain_Build/statusIcon.svg)
 
-Vue 3 + TypeScript + Vite
-
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+技术栈
+- Vue 3、Vue Router v4.x
+- TypeScript
+- Vite
+- [Arco Design_@arco-design/web-vue](https://arco.design/vue/docs/start)
+- 图标
+  - [lucide-vue-next](https://lucide.dev/icons/)
+  - [@arco-design/web-vue/es/icon](https://arco.design/vue/component/icon)
+- less
