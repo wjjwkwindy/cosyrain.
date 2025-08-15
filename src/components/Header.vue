@@ -7,12 +7,23 @@
 
     <div class="header-nav">
       <div class="header-links">
-        <RouterLink to="/posts">Post</RouterLink>
-        <RouterLink to="/tools">Tool</RouterLink>
-        <RouterLink to="/photo">Photo</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/" :class="{ active: isActive('/') }">Home</RouterLink>
+        <RouterLink to="/posts" :class="{ active: isActive('/posts') }"
+          >Post</RouterLink
+        >
+        <RouterLink to="/tools" :class="{ active: isActive('/tools') }"
+          >Tool</RouterLink
+        >
+        <RouterLink to="/photo" :class="{ active: isActive('/photo') }"
+          >Photo</RouterLink
+        >
+        <RouterLink to="/about" :class="{ active: isActive('/about') }"
+          >About</RouterLink
+        >
       </div>
       <div class="header-icons">
+        <icon-sun v-if="!isDarkMode" :size="20" @click="toggleDarkMode" />
+        <icon-moon v-else :size="20" @click="toggleDarkMode" />
         <icon-search :size="20" @click="showSearchModal" />
       </div>
     </div>
@@ -20,6 +31,26 @@
 </template>
 
 <script setup lang="ts">
+import { ref, inject } from 'vue';
+import { useRoute } from 'vue-router';
+
+// 判断当前所在路由，并将链接高亮
+const route = useRoute();
+const isActive = (path: string) => {
+  if (path === '/') {
+    return path === route.path;
+  } else {
+    return route.path.indexOf(path) === 0;
+  }
+};
+
+// 暗黑模式
+const isDarkMode = ref(false);
+const toggleDarkMode = () => {
+  isDarkMode.value = !isDarkMode.value;
+  // document.documentElement.classList.toggle('dark', isDarkMode.value);
+};
+
 // 搜索弹窗
 const openSearchModal = inject('openSearchModal') as () => void;
 function showSearchModal() {
@@ -32,7 +63,7 @@ function showSearchModal() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 .logo-container {
@@ -81,8 +112,10 @@ function showSearchModal() {
   font-size: 0.95em;
   font-weight: bold;
 }
-.header-links a:hover {
+.header-links a:hover,
+.header-links a.active {
   text-decoration: underline;
+  color: #1cc26c;
 }
 
 .header-icons {
