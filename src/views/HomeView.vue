@@ -9,8 +9,8 @@
 
     <!-- 卡片数据 -->
     <a-row :gutter="[24, 24]">
-      <a-col :span="12" v-for="item in 4">
-        <HomeAirQuality />
+      <a-col :span="12" v-for="n in 4">
+        <HomeAirQuality :data-index="n" />
       </a-col>
     </a-row>
   </a-space>
