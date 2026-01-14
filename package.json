@@ -13,11 +13,13 @@
     "@unhead/vue": "^2.0.8",
     "ant-design-vue": "4.x",
     "dayjs": "^1.11.13",
+    "echarts": "^6.0.0",
     "lucide-vue-next": "^0.488.0",
     "markdown-it-github-alerts": "^1.0.0",
     "modern-normalize": "^3.0.1",
     "unplugin-vue-markdown": "^28.3.1",
     "vue": "^3.5.13",
+    "vue-echarts": "^7.0.3",
     "vue-router": "4"
   },
   "devDependencies": {

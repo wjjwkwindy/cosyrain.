@@ -1,6 +1,6 @@
 <template>
   <a-modal
-    v-model:visible="visible"
+    v-model:open="visible"
     :hide-title="true"
     :footer="false"
     @open="openSearchModal"
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineExpose, nextTick } from 'vue';
+import { ref, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
 import type { RouteRecordNormalized } from 'vue-router';
 
