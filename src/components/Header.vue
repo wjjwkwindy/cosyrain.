@@ -17,6 +17,9 @@
         <RouterLink to="/photo" :class="{ active: isActive('/photo') }"
           >Photo</RouterLink
         >
+        <RouterLink to="/movies" :class="{ active: isActive('/photo') }"
+          >Movies</RouterLink
+        >
         <RouterLink to="/about" :class="{ active: isActive('/about') }"
           >About</RouterLink
         >

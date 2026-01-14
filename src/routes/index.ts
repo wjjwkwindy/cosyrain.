@@ -80,6 +80,12 @@ const routes: RouteRecordRaw[] = [
         name: 'PostsView',
         component: () => import('@/views/PostsView.vue'),
       },
+      // Movies
+      {
+        path: '/movies',
+        name: 'MoviesView',
+        component: () => import('@/views/MoviesView.vue')
+      },
       ...markdownRoutes,
     ],
   },
