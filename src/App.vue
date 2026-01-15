@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import { ref, provide } from 'vue';
 
-import GlobalSearchModal from './components/GlobalSearchModal.vue';
+import GlobalSearchModal from '@/components/common/GlobalSearchModal.vue';
 
 const searchModalRef = ref();
 function openSearchModal() {

@@ -10,5 +10,5 @@ tag: TS
 > Highlights information that users should take into account, even when skimming.
 
 <script setup>
-  import PixelCanvasCard from '../../src/components/PixelCanvasCard.vue';
+  import PixelCanvasCard from '../../src/components/article/PixelCanvasCard.vue';
 </script>

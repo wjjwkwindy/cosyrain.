@@ -129,5 +129,5 @@ queue.run();
 <MultipleTaskQueue />
 
 <script setup>
-  import MultipleTaskQueue from '../../src/components/MultipleTaskQueue.vue'
+  import MultipleTaskQueue from '../../src/components/article/MultipleTaskQueue.vue'
 </script>

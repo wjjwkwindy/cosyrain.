@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import ArticleList from '@/components/ArticleList.vue';
+import ArticleList from '@/components/article/ArticleList.vue';
 import HomeAirQuality from '@/views/HomeAirQuality.vue';
 </script>
 
