@@ -8,21 +8,11 @@
     <div class="header-nav">
       <div class="header-links">
         <RouterLink to="/" :class="{ active: isActive('/') }">Home</RouterLink>
-        <RouterLink to="/posts" :class="{ active: isActive('/posts') }"
-          >Post</RouterLink
-        >
-        <RouterLink to="/tools" :class="{ active: isActive('/tools') }"
-          >Tool</RouterLink
-        >
-        <RouterLink to="/photo" :class="{ active: isActive('/photo') }"
-          >Photo</RouterLink
-        >
-        <RouterLink to="/movies" :class="{ active: isActive('/movies') }"
-          >Movies</RouterLink
-        >
-        <RouterLink to="/about" :class="{ active: isActive('/about') }"
-          >About</RouterLink
-        >
+        <RouterLink to="/post" :class="{ active: isActive('/post') }">Post</RouterLink>
+        <RouterLink to="/tool" :class="{ active: isActive('/tool') }">Tool</RouterLink>
+        <RouterLink to="/photo" :class="{ active: isActive('/photo') }">Photo</RouterLink>
+        <RouterLink to="/movie" :class="{ active: isActive('/movie') }">Movie</RouterLink>
+        <RouterLink to="/about" :class="{ active: isActive('/about') }">About</RouterLink>
       </div>
       <div class="header-icons">
         <icon-sun v-if="!isDarkMode" :size="20" @click="toggleDarkMode" />
@@ -102,11 +92,13 @@ function showSearchModal() {
     display: flex;
     align-items: center;
     gap: 40px;
+
     a {
       color: var(--color-text-1);
       font-size: 0.95em;
       font-weight: bold;
     }
+
     a.active,
     a:hover,
     .header-links a.active {

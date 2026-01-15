@@ -46,12 +46,12 @@ const routes: RouteRecordRaw[] = [
       },
       // Tools
       {
-        path: '/tools',
+        path: '/tool',
         name: 'ToolsView',
         component: () => import('@/views/ToolsView.vue'),
       },
       {
-        path: '/tools/img',
+        path: '/tool/img',
         name: '照片构图分析',
         meta: {
           icon: 'IconFileImage',
@@ -63,7 +63,7 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../../pages/tools/Img.vue'),
       },
       {
-        path: '/tools/calc',
+        path: '/tool/calc',
         name: '计算器',
         meta: {
           icon: 'IconBarChart',
@@ -76,13 +76,13 @@ const routes: RouteRecordRaw[] = [
       },
       // Blogs
       {
-        path: '/posts',
+        path: '/post',
         name: 'PostsView',
         component: () => import('@/views/PostsView.vue'),
       },
       // Movies
       {
-        path: '/movies',
+        path: '/movie',
         name: 'MoviesView',
         component: () => import('@/views/MoviesView.vue')
       },
