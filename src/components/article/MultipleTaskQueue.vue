@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Queue from '@/logics/Queue';
+import Queue from '@/utils/queue';
 
 type Status = 0 | 1 | 2;
 interface Task {

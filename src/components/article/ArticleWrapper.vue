@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { formatDate } from '@/logics';
+import { formatDate } from '@/utils';
 const { frontmatter } = defineProps({
   frontmatter: {
     type: Object,

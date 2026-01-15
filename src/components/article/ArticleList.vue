@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { formatDate } from '@/logics';
+import { formatDate } from '@/utils';
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -53,11 +53,11 @@ const routes = router
   .getRoutes()
   .filter((i) => i.path.startsWith('/posts') && i.path !== '/posts');
 
-const getTagIcon  = (tag: string) => {
+const getTagIcon = (tag: string) => {
   const key = tag.toLowerCase() as keyof typeof tagCategory;
   return tagCategory[key]?.icon || 'icon-file';
 };
-const getTagIconColor  = (tag: string) => {
+const getTagIconColor = (tag: string) => {
   const key = tag.toLowerCase() as keyof typeof tagCategory;
   return tagCategory[key]?.color || 'default';
 };
