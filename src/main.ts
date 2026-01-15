@@ -15,7 +15,7 @@ import '@/styles/github-markdown.css';
 import 'ant-design-vue/dist/reset.css';
 
 import App from '@/App.vue';
-import WrapperArticle from '@/views/WrapperArticle.vue';
+import ArticleWrapper from '@/components/article/ArticleWrapper.vue';
 import router from '@/routes/index';
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 
@@ -26,7 +26,7 @@ app.use(router);
 app.use(head);
 app.use(ArcoVueIcon);
 app.use(Antd);
-app.component('WrapperArticle', WrapperArticle);
+app.component('ArticleWrapper', ArticleWrapper);
 
 // app.use(ArcoVue);
 

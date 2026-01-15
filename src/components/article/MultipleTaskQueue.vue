@@ -4,28 +4,23 @@
       <!-- 按钮 -->
       <a-row justify="end">
         <a-col>
-          <a-button
-            v-if="displayReset"
-            @click="handleTaskReset"
-            :disabled="taskStatus"
-            >重置</a-button
-          >
-          <a-button v-else type="primary" @click="handleTaskStart"
-            >启动</a-button
-          >
+          <a-button v-if="displayReset" @click="handleTaskReset" :disabled="taskStatus">重置</a-button>
+          <a-button v-else type="primary" @click="handleTaskStart">启动</a-button>
         </a-col>
       </a-row>
       <!-- 表格 -->
       <a-row>
         <a-col :span="24">
-          <a-table :columns="columns" :data="data" :pagination="false">
-            <template #time="{ record }">
-              {{ record.time * 1000 }}
-            </template>
-            <template #status="{ record }">
-              <a-tag :color="tagColor(record.status)">
-                {{ tagName(record.status) }}
-              </a-tag>
+          <a-table :columns="columns" :dataSource="data" :pagination="false">
+            <template #bodyCell="{ column, record }">
+              <template v-if="column.key === 'time'">
+                {{ record.time * 1000 }}
+              </template>
+              <template v-else-if="column.key === 'status'">
+                <a-tag :color="tagColor(record.status)">
+                  {{ tagName(record.status) }}
+                </a-tag>
+              </template>
             </template>
           </a-table>
         </a-col>
@@ -57,7 +52,7 @@ interface Task {
   status: Status;
 }
 
-// 格式化
+// 标签颜色
 function tagColor(status: Status) {
   const colors = {
     0: '',
@@ -68,6 +63,7 @@ function tagColor(status: Status) {
   return colors[status];
 }
 
+// 标签名称
 function tagName(status: Status) {
   const names = {
     0: '未执行',
@@ -87,11 +83,14 @@ const data = ref<Task[]>([
   { id: '任务5', time: 5, status: 0 },
   { id: '任务6', time: 1, status: 0 },
 ]);
+
+// 表格列
 const columns = [
-  { title: '任务ID', dataIndex: 'id' },
-  { title: '执行时间(ms)', slotName: 'time' },
-  { title: '执行状态', slotName: 'status' },
+  { title: '任务ID', dataIndex: 'id', key: 'id' },
+  { title: '执行时间(ms)', slotName: 'time', key: 'time' },
+  { title: '执行状态', slotName: 'status', key: 'status' },
 ];
+
 const completedList = ref([] as Array<any>);
 const displayReset = ref(false);
 const taskStatus = ref(true);

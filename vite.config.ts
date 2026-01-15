@@ -18,7 +18,7 @@ export default defineConfig({
     }),
     svgLoader(),
     Markdown({
-      wrapperComponent: 'WrapperArticle',
+      wrapperComponent: 'ArticleWrapper',
       headEnabled: true,
       async markdownItSetup(md) {
         md.use(
